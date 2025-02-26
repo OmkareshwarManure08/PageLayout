@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Layout</title>
+</head>
+<style>
+    body{
+        margin: 0px;
+        background-color: silver;
+    }
+    header{
+        /* Style the header */
+        background-color: gray;
+        padding: 20px;
+        text-align: center;
+    }
+    nav{
+        /*style the navigation Bar */
+        overflow: hidden;
+        background-color: #33333395;
+
+    }
+    nav a{
+        /* style the navigation Bar Link */
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    nav a:hover{
+        /* Change Color on Hover */
+        background-color: #ddd;
+        color: black;
+    }
+    main{
+        padding: 20px;
+        margin: 5px
+        
+    }
+    
+    main::after{
+        /* Clear Floats after the cloumns */
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .column1 {
+        /* Create three equal column that floats next to each other */
+        float: left;
+        padding: 50px;
+        width: 31%;
+        text-align: justify;
+        color:black;
+        font-size: 20px;
+        
+    }
+    .column2{
+        /* Create three equal column that floats next to each other */
+        float:right;
+        padding: 50px;
+        width: 31%;
+        text-align: justify;
+        color: black;
+        font-size: 20px;
+        
+    }
+    /* Responesive layout - makes the three columns Stack on the of the each other 
+    instead of the next to each other */
+    @media screen and (max-width: 600px) {
+        .column{
+            width: 100%;
+        }
+    } 
+    footer{
+        /* style the footer of the page */
+        background-color: #8c7b7b;
+        text-align: center;
+        padding: 10px;
+    }
+</style>
+<body>
+    <header>
+        <h1>Page Layout</h1>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact Us</a>
+        <a href="#login">Log in</a>
+        <a href="#signup">Sign Up</a>
+    </nav>
+    <main>
+        <div class="column1">
+            <h2>Main content 1</h2>
+            <p>The layout in this section often depends on the target Users.
+                The most common layout is one (or combining them) of the following: <br>
+                1-column (often used for mobile browsers)
+            </p>
+        </div>
+        <div class="column2">
+            <h2>Main content 2</h2>
+            <p>The Layout in this section often depends on the target users.
+                The most common layout is one (or combining them) of the following: <br>
+                2-column (often used for tablets and laptops)
+            </p></h2>
+        </div>
+        <div class="column1">
+            <h2>Main content 3</h2>
+            <p>The layout in this section often depends on the target Users.
+                The most common layout is one (or combining them) of the following: <br>
+                3-column (often used for mobile browsers)
+            </p>
+        </div>
+    </main>
+    <footer>
+        <h3>Page Layout&copy;</h3>
+        <p>Copyright Protected</p>
+    </footer>
+</body>
+</html>
